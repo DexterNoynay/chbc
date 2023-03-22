@@ -693,9 +693,12 @@ video:focus{
 		width: 400px!important;
 	}
 	.footer-btn.btn-3{
-		height: unset;
+/*		height: unset;*/
 		margin: auto 5px;
 	}
+    .btn-3{
+        background-size: 20px 20px;
+    }
 	.footer-btn.btn-2 {
 		padding: 10px;
 		height: 35px;
