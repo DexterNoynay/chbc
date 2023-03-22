@@ -2,8 +2,8 @@
 
 
 var videoSource = new Array();
-videoSource[0] = '../common/videos/video.mp4';
-videoSource[1] = '../common/videos/video1.mp4';
+videoSource[0] = 'https://drive.google.com/uc?export=download&id=1QYBVdaqRZ4tMruBD4EauDS-UezJLiLYf';
+videoSource[1] = 'https://drive.google.com/uc?export=download&id=1a1nYXj-HiZFtPeW99p183NJUoxdxj9Dt';
 //videoSource[2] = '../common/videos/cotto.mp4';
 var i = 0; // define i
 var videoCount = videoSource.length;
