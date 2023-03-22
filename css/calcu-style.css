@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* CSS Document */
+@keyframes transitionIn{
+	from{
+		left: -400px;
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+		left: 0;
+	}
+}	
+.sidenav {
+
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 120;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to top, #505050 0%, #505050 30%, #707070 90%, #707070 100%);
+  overflow-x: hidden;
+	text-align: center;
+	transition: 0.5s;
+}
+.sidenav.open{
+	animation: transitionIn 0.5s;
+	left: 0;
+}
+.sidenav .tile-measure input{
+	display: inline;
+	width: 100px;
+	font-size: 20px;
+	margin: 25px 10px 25px 10px;
+	height: 35px;;
+}
+.sidenav .tile-measure p{
+	color: white;
+	text-align: left;
+	margin:  0 15%;
+	margin-top: -15px;
+	font-size: 20px;
+}
+.sidenav input {
+  text-decoration: none;
+  font-size: 18px;
+  color: #111;
+  display: block;
+	margin: 25px 30px 25px 35px;
+	width: 70px;
+}
+.sidenav .tiles_number{
+	font-size: 25px;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav-title{
+	text-align: center; 
+	font-size: 40px;
+	color: white;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	padding: 20px; 
+}
+.converter-body{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 0px 0px 2px 1px #cacaca;
+}
+.converter-title{
+	text-align: center;
+	margin: 13px 0px;
+	font-size: 40px;
+}
+input{
+	height: 25px;
+	text-align: center;
+	border: 1px solid black;
+}
+#input{
+	margin-left: 25px;
+}
+#inputType,#resultType{
+	width: 150.66px;
+	margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+	color: red;
+	border: 1px solid black;
+}
+#resultType{
+	margin-left: 12.5px;
+}

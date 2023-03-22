@@ -1,0 +1,77 @@
+/* CSS Document */
+#login-container {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 1000000;
+}
+#login-container-inner {
+	background: linear-gradient(to top, #505050 0%, #505050 30%, #707070 90%, #707070 100%);
+	width: 200px;
+	height: 180px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 5px;
+}
+#login-container form {
+	margin: 0 20px;
+}
+#login-container input[type=text],
+#login-container input[type=password],
+#login-container input[type=submit] {
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	height: 40px;
+	border: none;
+	letter-spacing: 2px;
+	font-size: 1.6rem;
+}
+#login-container input[type=text] {
+	margin-bottom: 5px;
+}
+#login-container input[type=password] {
+	margin-bottom: 10px;
+}
+#login-container input[type=submit] {
+	height: auto!important;
+	margin-top: 5px;
+	width: 50%!important;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background: #FFA500;
+	border: none;
+}
+#login-container input[type=text]:focus,
+#login-container input[type=password]:focus {
+	outline: 1px solid #FFFFFF;	
+}
+#login-container input[type=submit]:focus,
+#login-container input[type=submit]:hover {
+	color: #FFA500;
+	background: #FFFFFF;
+}
+#login-container #login-result {
+	color: #FF0004;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: calc(50% - 37.5px);
+	font-weight: bold;
+	letter-spacing: 2px;
+	opacity: 0;
+}
+
+@keyframes resultFadeOut {
+	0% {opacity: 1;}
+	85% {opacity: 1;}
+	100% {opacity: 0;}
+}

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/base.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<title>Cebu Home and Builders: Tiles and Bath</title>
+	<link rel="icon" href="images/icon-title.png" type="image/x-icon"> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    
+	<link rel="stylesheet" href="css/sweetalert2.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/font.googleapis.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/calcu-style.css" rel="stylesheet">
+	<link href="css/vid-style.css" rel="stylesheet">
+	<link href="css/talkingtiles.css" rel="stylesheet">
+	<script src="js/submain.js"></script>
+	<script src="js/calcu.js"></script>
+	
+	
+	  
+<!--
+	<link rel="stylesheet" href="../css/login.css">
+	<script src="../js/login.js"></script>
+-->
+	
+	
+	<!-- InstanceBeginEditable name="head" -->
+		<!-- InstanceEndEditable -->
+	<!-- InstanceParam name="id" type="text" value="top" -->
+	<!-- InstanceParam name="class" type="text" value="" -->
+	<!-- InstanceParam name="pagetitle" type="text" value="" -->
+</head>
+<body id="top" class="">
+	 
+<!--
+	<div id="login-container">
+		<div id="login-container-inner">
+			<p id="login-result"></p>
+			<form onSubmit="checkUser()">	
+				<input type="text" id="login-name" placeholder="Username" required>		
+				<input type="password" id="login-password" placeholder="Password" required>
+				<input type="Submit" value="LOGIN">
+			</form>
+		</div>
+	</div>
+-->
+	
+	
+<!--
+	<div class="navbar-container">
+		<nav class="navbar">
+			<ul class="navbar-list">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Return</a></li>
+				<li><a href="#">Tile Calculator</a></li>
+				<li><a href="#">Talking Tiles</a></li>
+			</ul>
+		</nav>
+	</div>
+-->
+	<!-- Sidebar -->
+	<div class="sidenav" style="display: none">
+		<h1 class="sidenav-title">TILE <br>CALCULATOR</h1>
+		<a class="close-btn"><img src="images/close-btn.png" width="30px" height="30px"></a>
+		<div class="tile-measure">
+		  <input placeholder="Width" id="tile-width">
+		  <input placeholder="Length" id="tile-height">
+		<select id="unit">
+			<option value="cm">cm</option>
+			<option value="inch">inch.</option>
+			<option value="meter">meter</option>
+		</select>
+			<p>Tile Size: <span class="tile-area u_bold">&nbsp;0</span><sup>2</sup></p>
+		</div>
+		<div class="tile-measure">
+		  <input placeholder="Width" id="room-width">
+		  <input placeholder="Length" id="room-height">
+		<select id="room-unit">
+			<option value="cm">cm</option>
+			<option value="inch">inch.</option>
+			<option value="meter">meter</option>
+		</select>
+			<p>Floor/Wall Size: <span class="room-area u_bold">&nbsp;0</span><sup>2</sup></p>
+			<br>
+			<p style="font-style: italic; font-size: 13px;">Disclaimer: The number of tiles are intended for estimate purposes only. Please add allowance to the estimated number of pieces based on your requirements.</p>
+			<br>
+			<p>Approximate number of Tiles: <br><span class="tiles_number">&nbsp;0</span></p>
+			
+		</div>
+	<!--<input>-->
+	</div>
+    
+<!--    SIDE FOR VIDEO LIST-->
+    <div class="sidenav_vid" style="display: none">
+		<h1 class="sidenav_vid-title">TILE VIDEO</h1>
+		<a class="close-btn1"><img src="images/close-button.png" width="30px" height="30px" alt=""></a>
+		<span class="play_btn btn-4" id="icon_open_video">
+				PLAY
+			</span>
+        <div class="container_vid">
+            
+        <div class="main-video">
+        <div class="video">
+            <video src="https://drive.google.com/uc?export=download&id=1QYBVdaqRZ4tMruBD4EauDS-UezJLiLYf" controls ></video>
+            <div class="btn-player">
+            <button class="prev-btn"><img src="images/next.png" alt="prevbutton"></button>
+            <button class="pause-btn">Pause</button>
+            <button class="next-btn"><img src="images/next.png" alt="nextbutton"></button>
+                </div>
+            
+            <h3 class="title">1. GuardTec Antibacterial</h3>
+            </div>
+        </div>
+            
+        <div class="video-list">
+        <div class="vid active">
+             <video src="https://drive.google.com/uc?export=download&id=1QYBVdaqRZ4tMruBD4EauDS-UezJLiLYf" poster="common/thumbnails/1.png" muted ></video>
+            <h3 class="title">1. GuardTec Antibacterial Tile</h3>
+        </div>
+            
+        <div class="vid">
+             <video src="https://drive.google.com/uc?export=download&id=1a1nYXj-HiZFtPeW99p183NJUoxdxj9Dt" poster="common/thumbnails/2.png" muted></video>
+            <h3 class="title">2. SafeSure Antibacterial Tile</h3>
+        </div>
+        </div>
+        </div>
+         <script>
+             
+        let listVideo = document.querySelectorAll('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video video');
+        let title = document.querySelector('.main-video .title');
+        let close = document.querySelector('.close-btn1');
+             
+             let currentIndex = 0;
+             let nextBtn = document.querySelector('.next-btn');
+             let prevBtn = document.querySelector('.prev-btn');
+             let pauseBtn = document.querySelector('.pause-btn');
+//    NEXT AND PREVIOUS BUTTON        
+            nextBtn.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex >= listVideo.length) {
+                currentIndex = 0;
+            }
+            let nextVideo = listVideo[currentIndex];
+            let src = nextVideo.children[0].getAttribute('src');
+            mainVideo.src = src;
+            let text = nextVideo.children[1].innerHTML;
+            title.innerHTML = text;
+            mainVideo.play();
+            listVideo.forEach(vid => vid.classList.remove('active'));
+            nextVideo.classList.add('active');
+            nextVideo.scrollIntoView({ behavior: 'smooth' });
+                pauseBtn.innerHTML = "Pause";
+        });
+             
+            pauseBtn.addEventListener('click', () => {
+            if(mainVideo.paused){
+            mainVideo.play();
+            pauseBtn.innerHTML = "Pause";
+            }else{
+            mainVideo.pause();
+            pauseBtn.innerHTML = "Play";
+            }
+            });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = listVideo.length - 1;
+            }
+            let prevVideo = listVideo[currentIndex];
+            let src = prevVideo.children[0].getAttribute('src');
+            mainVideo.src = src;
+            let text = prevVideo.children[1].innerHTML;
+            title.innerHTML = text;
+            mainVideo.play();
+            listVideo.forEach(vid => vid.classList.remove('active'));
+            prevVideo.classList.add('active');
+            prevVideo.scrollIntoView({ behavior: 'smooth' });
+            pauseBtn.innerHTML = "Pause";
+        });
+//        END
+        
+//          Automatically next video when done playing
+            mainVideo.addEventListener('ended', () => {
+            currentIndex++;
+            if (currentIndex >= listVideo.length) {
+            currentIndex = 0;
+            }
+                let nextVideo = listVideo[currentIndex];
+                let src = nextVideo.children[0].getAttribute('src');
+                mainVideo.src = src;
+                let text = nextVideo.children[1].innerHTML;
+                title.innerHTML = text;
+                mainVideo.play();
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                nextVideo.classList.add('active');
+                nextVideo.scrollIntoView();
+                });
+//             END
+             
+//           when close the sidenav_vid pause video and start at 0
+             close.onclick = () => {
+             mainVideo.pause();
+             mainVideo.currentTime = 0;    
+            }
+//             END
+            listVideo.forEach(video =>{
+                video.onclick = () =>{ 
+                    listVideo.forEach(vid => vid.classList.remove('active'));
+                    video.classList.add('active');
+                    currentIndex = Array.prototype.indexOf.call(listVideo, video); 
+                    if(video.classList.contains('active')){ 
+                        let src = video.children[0].getAttribute('src');
+                        mainVideo.src = src;
+                        mainVideo.play();
+                        let text = video.children[1].innerHTML;
+                        title.innerHTML = text;
+                        video.scrollIntoView();
+                        pauseBtn.innerHTML = "Pause";
+
+                       
+                     };
+                 };
+             });
+        
+        </script>
+ 
+	<!--<input>-->
+	</div>
+     
+<!--    END-->
+	
+	<div id ="portfolio" class="text-center paddsection">
+		<div class="section-title no-hover">
+			<img src="images/chb_logo.png" alt="chb_logo" width="20%" height="20%">
+			<br>
+            <div class="style-header-container">
+<!--				<img src="../images/Choose ur style.png" alt="chb_logo" width="100%" height="100%" >-->
+			</div>
+		</div>
+		<div class="container">
+			<!-- InstanceBeginEditable name="contents" -->
+				<div class="row">
+				<div class="col-md-12 u_mab90">
+                    <div class="search_bar">
+						<form action="pages/search-filter.html">
+                          <div class="search">
+                            <div class="icon"></div>
+                              <div class="input">
+                                <input id="myinput" type="text"  placeholder="Search..." style="text-align: left;">
+                              </div>
+							  <span class="clear"></span>
+                          </div>
+						  <input id="search_btn" type="submit" value="Search" onClick="searchValue();" hidden="">
+						</form>
+                    </div>
+					<br>
+<!--					<h2 class="u_grey">Select the brand you are looking for.</h2>-->
+					<br>
+					
+					<div class="portfolio-container u_display_flex" id="card">
+						<div class="col-md-12" >
+							<a class="card-url" href="pages/oem-options.html">
+							<div class="card" id="card">
+								<img src="images/oem-bg.jpg" alt="Avatar" class="images">
+								<h3 class="u_pab15">OEM TILE BRANDS</h3>
+								<p style="display: none;">Ceramic,Fabric,Terrazo</p>
+							</div>
+							</a>
+					</div>
+					  <div class="col-md-4 portfolio-thumbnail all ">
+						  <a class="card-url"  href="pages/exclusive-options-capucino.html">
+							<div class="card" id="card">
+							  <img src="images/exclusive/exclusive-tile-logo2.png" alt="Avatar" class="images">
+								<h3 class="u_pab15 u_long_text">EXCLUSIVE PARTNER BRANDS</h3>
+							</div>
+						  </a>
+						</div>
+						<!--IF YOU WANT TO ADD ANOTHER CARD JUST COPY THIS DIV-->
+					  <div class="col-md-4 portfolio-thumbnail ">
+							<a class="card-url" href="pages/large-format.html">
+							<div class="card" id="card">
+							  <img src="images/exclusive/large-format-logo.png" alt="Avatar" class="images">
+								<h3 class="u_pab15 u_long_text">LARGE FORMAT TILE</h3> 
+							</div>
+							</a>
+						</div>	
+						<!-- COPY UNTIL THIS PART ONLY-->
+					  <div class="col-md-4 portfolio-thumbnail ">
+							<a class="card-url" href="pages/thick-tile-options.html">
+							<div class="card" id="card">
+							  <img src="images/exclusive/thick-tile-logo.png" alt="Avatar" class="images">
+								<h3 class="u_pab15 u_long_text">THICK TILE</h3> 
+							</div>				    
+							</a>
+						</div>
+							<div class="col-md-4 portfolio-thumbnail" >
+							<a class="card-url" href="pages/anti-bacterial-options.html">
+							<div class="card" id="card">
+								<img src="images/anti-bacterial/antibacterial-page.jpg" alt="Avatar" class="images">
+								<h3 class="u_pab15 u_long_text">ANTIBACTERIAL TILE</h3>
+								<p style="display: none;">Ceramic,Fabric,Terrazo</p>
+							</div>
+							</a>
+						</div>
+                        <div class="col-md-4 portfolio-thumbnail ">
+							<a class="card-url" href="pages/wall-tile-options.html">
+							<div class="card" id="card">
+							  <img src="images/wall-tile-roomscene.jpg" alt="Avatar" class="images">
+								<h3 class="u_pab15 u_long_text">WALL TILE</h3> 
+							</div>
+							</a>
+						</div>	
+						<div class="col-md-4 portfolio-thumbnail ">
+							<a class="card-url" href="pages/european-options.html">
+							<div class="card" id="card">
+							  <img src="images/european-new-scene.jpg" alt="Avatar" class="images">
+								<h3 class="u_pab15 u_long_text">EUROPEAN TILE BRANDS</h3> 
+							</div>
+							</a>
+						</div>
+					
+						<div class="col-md-4 portfolio-thumbnail ">
+							<a class="card-url" href="pages/asean-exclusive-options.html">
+							<div class="card" id="card">
+							  <img src="images/asean-new-scene.jpg" alt="Avatar" class="images">
+								<h3 class="u_pab15 u_long_text">ASEAN TILE BRANDS</h3> 
+							</div>
+							</a>	
+						</div>
+
+						
+						<!--PASTE HERE THE NEW DIV WITH NEW DETAILS-->
+				  </div>
+					</div>
+				  </div>
+				
+			    <!-- InstanceEndEditable -->
+		</div>
+	</div>
+	
+<!--	Talking Tiles Video/s	-->
+	<div class="modal_backdrop" id="backdrop"></div>
+	<div class="my_modal">
+		
+		<video controls="controls" id="vid" width="50%" height="50%">
+		  <source id="ss" src="common/videos/video.mp4" type="video/mp4">
+		</video>
+<!--
+		
+		<div class="video_control prev">
+			<img src="images/icon_left_arrow.png" alt="">
+		</div>
+
+		<div class="video_control next">
+			<img src="images/icon_right_arrow.png" alt="">
+		</div>
+		<div id="myVideo" style="height: 400px"></div>
+-->
+	</div>
+<!--	xxxxxxxxxxxxxxxxxxxxxxx	-->
+	   
+	<footer>
+		<div class="footer-buttons">
+			<span class="footer-btn btn-2">
+				TALKING TILES
+			</span>
+			<span class="footer-btn btn-3">
+				<div class="calculator">
+<!--					<img src="../images/icon_calculator.png">-->
+				</div>
+			</span>
+		</div>
+		<div class="footer-buttons2">
+			<div class="logo">
+				<img src="common/logo/chbclogo.png" width="110px" height="53px" alt="Cebu-Home-Builder.png" class="chb_logo">
+			</div>
+		</div>
+	</footer>
+    
+     
+	<script src="js/talkingtiles.js"></script>
+    
+    
+</body>
+	<script>		
+		var modal = document.getElementById("myModal");
+        var body = document.body;
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+            body.style.overflow = 'auto';
+		  }
+		}
+	</script>
+	<script>
+//    FOR PLAY ALL TALING TILES VIDS
+        const ttBtn1 = document.querySelector('.btn-4');
+		const ttBackdrop = document.querySelector('.modal_backdrop');
+		const ttModal = document.querySelector('.my_modal');
+		const hidemenu = document.querySelector('.hide-menu-container');
+		const hidesidenav = document.querySelector('.sidenav_vid');
+        const Video_block = document.querySelector('.main-video video');
+		
+		
+		ttBtn1.onclick = function() {
+			console.log("click");
+            $('body').css('overflow','hidden');
+			ttBackdrop.style.display= "block";
+			ttModal.style.display= "block";
+            $('.icon-container').removeClass('show');
+            hidesidenav.style.display="none";
+			Video_block.pause();
+            Video_block.currentTime = 0; 
+			videoPlay(0);
+		}
+		
+		var backdrop = document.getElementById("backdrop");
+		window.onclick = function(event) {
+			if (event.target == backdrop) {
+                $('body').css('overflow','auto');
+				ttBackdrop.style.display = "none";
+				ttModal.style.display= "none";
+				document.getElementById('vid').pause();
+          		document.getElementById('vid').currentTime = 0;
+                $('.icon-container').removeClass('show');
+                hidemenu.style.display="block";
+                
+			}
+		}
+    
+    </script>
+	
+		<script>
+		//For Talking Tiles Button
+		const ttBtn = document.querySelector('.btn-2');
+//        var span = document.getElementsByClassName("close")[1];
+		const sidenav_vid = document.querySelector('.sidenav_vid');
+        const Video = document.querySelector('.main-video video');
+        const hidemenu2 = document.querySelector('.hide-menu-container');
+		ttBtn.onclick = function() {
+			if(sidenav_vid.style.display== "none"){
+                $('body').css('overflow','hidden');
+				sidenav_vid.style.display= "block";
+				$("div.sidenav_vid").addClass('open');
+                Video.play();
+                hidemenu2.style.display="none";
+                $('.icon-container').removeClass('show');
+                
+			}
+			else{
+				sidenav_vid.style.display= "none";
+				$("div.sidenav_vid").removeClass('open');
+                $('body').css('overflow','auto');
+			}
+		}
+        </script>
+        
+        
+	    <script>
+		//----------------------------------------------------//
+		
+		const btn = document.querySelector('.btn-3');
+		const btn2 = document.querySelector('.calc-btn');
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		const sidenav = document.querySelector('.sidenav');
+		btn.onclick = function() {
+			if(sidenav.style.display== "none"){
+				sidenav.style.display= "block";
+				$("div.sidenav").addClass('open');
+			}
+			else{
+				sidenav.style.display= "none";
+				$("div.sidenav").removeClass('open');
+			}
+		}
+		
+		
+		//Hide icon
+		const icon = document.querySelector('.icon');
+		const search = document.querySelector('.search');
+		const clear = document.querySelector('clear');
+		search.classList.toggle('active');
+		icon.onclick = function(){
+			search.classList.toggle('active');
+			if($('div.search').hasClass('active'))
+				$('span.clear').show();
+			else
+				$('span.clear').hide();
+		}
+	</script>
+	 
+	
+	
+	
+    
+    
+    <script>
+        
+        //      THIS IS FOR MESSAGE ALERT JS    //
+        
+        //   document.querySelector(".card-alert").addEventListener('click', function(){
+        //   Swal.fire("NO LINK YET");
+        //   });
+            const element = document.querySelectorAll('.card-alert');
+            if (element.length !== 0) {
+            for (var i=0; i<element.length; i++) {
+            element[i].addEventListener('click', function () {
+            Swal.fire("Sorry, This is Empty!");
+            });
+            }
+            } 
+    </script>
+    
+<!-- InstanceEnd --></html>

@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	  <title>Cebu Home and Builders: Tiles and Bath</title>
+	<link rel="icon" href="../images/icon-title.png" type="image/x-icon"> 
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+<!--		<link rel="stylesheet" href="../css/bootstrap.min.css">-->
+	
+<!--
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="../js/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
+	  <link href="https://fonts.googleapis.com/css?family=Alata|Josefin+Sans|Maven+Pro&display=swap" rel="stylesheet">
+-->
+<!--
+	 <link href="../css/font.googleapis.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/calcu-style.css" rel="stylesheet">
+		<script src="../js/main.js"></script>
+		<script src="../js/calcu.js"></script>
+-->
+    
+    <script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+    <script src="../js/sweetalert2.all.min.js"></script>
+    
+	<link rel="stylesheet" href="../css/sweetalert2.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link href="../css/font.googleapis.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/calcu-style.css" rel="stylesheet">
+	<link href="../css/talkingtiles.css" rel="stylesheet">
+    <link href="../css/vid-style.css" rel="stylesheet">
+	<script src="../js/main.js"></script>
+	<script src="../js/calcu.js"></script>
+	
+</head>
+<body >
+	<a id="hide-menu" class="hide-menu-container">
+				<img src="../images/hide-menu1.png" class="hide-menu" alt="">
+	</a>
+	<div class="icon-container">
+		<a id="show-menu" class="show-menu-container">
+				<img src="../images/show-menu.png" class="show-menu" alt="">
+		</a>
+		<div class="icon-box">
+			<div class="side-text">
+				Home
+			</div>
+			<div class="icon">
+				<a class="home-btn"><img src="../images/home.png" width="40px" height="40px"></a>
+			</div>
+		</div>
+		
+		<div class="icon-box">
+			<div class="side-text">
+				Return
+			</div>
+			<div class="icon">
+				<a class="return-btn"><img src="../images/return.png" width="40px" height="40px"></a>
+			</div>
+		</div>
+		<div class="icon-box">
+			<div class="side-text">
+				Tile Calculator
+			</div>
+			<div class="icon">
+		    <img src="../images/icon_calculator.png" width="40px" height="40px"> </div>
+		</div>
+		<div class="icon-box">
+				<div class="side-text">				
+					Talking Tiles		
+				</div>
+			<div class="icon">
+				<a class="btn-2"><img src="../images/play-button.png" width="40px" height="40px"></a>
+			</div>
+		</div>
+	</div>
+		<!-- Sidebar -->
+		<div class="sidenav" style="display: none">
+		<h1 class="sidenav-title">TILE <br>CALCULATOR</h1>
+		<a class="close-btn"><img src="../images/close-btn.png" width="30px" height="30px"></a>
+		<div class="tile-measure">
+		  <input placeholder="Width" id="tile-width">
+		  <input placeholder="Length" id="tile-height">
+		<select id="unit">
+			<option value="cm">cm</option>
+			<option value="inch">inch.</option>
+			<option value="meter">meter</option>
+		</select>
+			<p>Tile Size: <span class="tile-area u_bold">&nbsp;0</span><sup>2</sup></p>
+		</div>
+		<div class="tile-measure">
+		  <input placeholder="Width" id="room-width">
+		  <input placeholder="Length" id="room-height">
+		<select id="room-unit">
+			<option value="cm">cm</option>
+			<option value="inch">inch.</option>
+			<option value="meter">meter</option>
+		</select>
+			<p>Floor/Wall Size: <span class="room-area u_bold">&nbsp;0</span><sup>2</sup></p>
+			<br>
+			<p style="font-style: italic; font-size: 13px;">Disclaimer: The number of tiles are intended for estimate purposes only. Please add allowance to the estimated number of pieces based on your requirements.</p>
+			<br>
+			<p>Approximate number of Tiles: <br><span class="tiles_number">&nbsp;0</span></p>
+			
+		</div>
+	<!--<input>-->
+	</div>
+    
+    <!--    SIDE FOR VIDEO LIST-->
+    <div class="sidenav_vid" style="display: none">
+		<h1 class="sidenav_vid-title">TILE VIDEO</h1>
+		<a class="close-btn1"><img src="../images/close-button.png" width="30px" height="30px" alt=""></a>
+		<span class="play_btn btn-4" id="icon_open_video">
+				PLAY
+			</span>
+        <div class="container_vid">
+            
+        <div class="main-video">
+        <div class="video">
+            <video src="../common/videos/video.mp4" controls ></video>
+            <div class="btn-player">
+            <button class="prev-btn"><img src="../images/next.png" alt="prevbutton"></button>
+            <button class="pause-btn">Pause</button>
+            <button class="next-btn"><img src="../images/next.png" alt="nextbutton"></button>
+                </div>
+            
+            <h3 class="title">1. GuardTec Antibacterial</h3>
+            </div>
+        </div>
+            
+       <div class="video-list">
+        <div class="vid active">
+             <video src="../common/videos/video.mp4" poster="../common/thumbnails/1.png" muted ></video>
+            <h3 class="title">1. GuardTec Antibacterial Tile</h3>
+        </div>
+            
+        <div class="vid">
+             <video src="../common/videos/video1.mp4" poster="../common/thumbnails/2.png" muted></video>
+            <h3 class="title">2. SafeSure Antibacterial Tile</h3>
+        </div>
+        
+<!--
+         <div class="vid">
+             <video src="../common/videos/cotto.mp4" poster="../common/thumbnails/3.jpg" muted></video>
+            <h3 class="title">3. Cotto Hygienic Tile</h3>
+        </div>
+-->
+        
+<!--
+          <div class="vid">
+             <video src="../common/videos/video1.mp4" muted></video>
+            <h3 class="title">3. Video title goes here</h3>
+        </div>
+            
+             <div class="vid">
+             <video src="../common/videos/video1.mp4" muted></video>
+            <h3 class="title">4. Video title goes here</h3>
+        </div>
+-->
+            
+        </div>
+        </div>
+         <script>
+             
+        let listVideo = document.querySelectorAll('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video video');
+        let title = document.querySelector('.main-video .title');
+        let closebtn = document.querySelector('.close-btn1');
+             
+             let currentIndex = 0;
+             let nextBtn = document.querySelector('.next-btn');
+             let prevBtn = document.querySelector('.prev-btn');
+             let pauseBtn = document.querySelector('.pause-btn');
+//    NEXT AND PREVIOUS BUTTON        
+            nextBtn.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex >= listVideo.length) {
+                currentIndex = 0;
+            }
+            let nextVideo = listVideo[currentIndex];
+            let src = nextVideo.children[0].getAttribute('src');
+            mainVideo.src = src;
+            let text = nextVideo.children[1].innerHTML;
+            title.innerHTML = text;
+            mainVideo.play();
+            listVideo.forEach(vid => vid.classList.remove('active'));
+            nextVideo.classList.add('active');
+            nextVideo.scrollIntoView({ behavior: 'smooth' });
+                pauseBtn.innerHTML = "Pause";
+        });
+             
+            pauseBtn.addEventListener('click', () => {
+            if(mainVideo.paused){
+            mainVideo.play();
+            pauseBtn.innerHTML = "Pause";
+            }else{
+            mainVideo.pause();
+            pauseBtn.innerHTML = "Play";
+            }
+            });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = listVideo.length - 1;
+            }
+            let prevVideo = listVideo[currentIndex];
+            let src = prevVideo.children[0].getAttribute('src');
+            mainVideo.src = src;
+            let text = prevVideo.children[1].innerHTML;
+            title.innerHTML = text;
+            mainVideo.play();
+            listVideo.forEach(vid => vid.classList.remove('active'));
+            prevVideo.classList.add('active');
+            prevVideo.scrollIntoView({ behavior: 'smooth' });
+            pauseBtn.innerHTML = "Pause";
+        });
+//        END
+        
+//          Automatically next video when done playing
+            mainVideo.addEventListener('ended', () => {
+            currentIndex++;
+            if (currentIndex >= listVideo.length) {
+            currentIndex = 0;
+            }
+                let nextVideo = listVideo[currentIndex];
+                let src = nextVideo.children[0].getAttribute('src');
+                mainVideo.src = src;
+                let text = nextVideo.children[1].innerHTML;
+                title.innerHTML = text;
+                mainVideo.play();
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                nextVideo.classList.add('active');
+                nextVideo.scrollIntoView();
+                });
+//             END
+             
+//           when close the sidenav_vid pause video and start at 0
+             close.onclick = () => {
+             mainVideo.pause();
+             mainVideo.currentTime = 0;    
+            }
+//             END
+            listVideo.forEach(video =>{
+                video.onclick = () =>{ 
+                    listVideo.forEach(vid => vid.classList.remove('active'));
+                    video.classList.add('active');
+                    currentIndex = Array.prototype.indexOf.call(listVideo, video); 
+                    if(video.classList.contains('active')){ 
+                        let src = video.children[0].getAttribute('src');
+                        mainVideo.src = src;
+                        mainVideo.play();
+                        let text = video.children[1].innerHTML;
+                        title.innerHTML = text;
+                        video.scrollIntoView();
+                        pauseBtn.innerHTML = "Pause";
+
+                       
+                     };
+                 };
+             });
+        </script>
+ 
+	<!--<input>-->
+	</div>
+     
+<!--    END-->
+	<div id ="portfolio" class="text-center paddsection">
+		<div class="section-title no-hover">
+			<img src="../images/chb_logo.png" alt="chb_logo" width="20%" height="20%">
+			<br>
+            <div class="style-header-container">
+<!--				<img src="../images/style-header.png" alt="chb_logo" width="100%" height="100%" >-->
+			</div>
+		</div>
+		<div class="container">
+				<div class="u_mab90">
+					<form>
+                          <div class="search">
+                            <div class="icon"></div>
+                              <div class="input">
+                                <input id="myinput" type="text"  placeholder="Search...">
+                              </div>
+							  <span class="clear"></span>
+                          </div>
+						  <input id="search_btn" type="submit" value="Search" onClick="searchValue();" hidden="">
+						</form>
+					<br>
+					<br>
+					<h2 class="u_grey">Search Catalog Here</h2>
+					<h2 class="found u_grey" hidden="">No items found</h2>
+					<br>
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 CERAMIC----------------------------->
+                    
+                   <div class="modal fade" id="ceramic" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelceramic" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelceramic">CERAMIC TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/ctce/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 CERAMIC------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 MODERN AND MONOCHROMATIC----------------------------->
+                    
+                   <div class="modal fade" id="mono" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelmono" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelmono">MODERN &#38; MONOCHROMATIC TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/zrpq/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 MODERN AND MONOCHROMATIC------------------>
+                    
+ <!--------------------THIS IS FOR MODAL FLIP HTML5 COMMERCIAL----------------------------->
+                    
+                   <div class="modal fade" id="com" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelcom" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelcom">COMMERCIAL SPACE TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/cpel/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 COMMERCIAL SPACE------------------>
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 MODERN AND CLASSIC MARBLE----------------------------->
+                    
+                   <div class="modal fade" id="classic" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelclassic" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelclassic">CLASSIC MARBLE TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/qjug/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 CLASSIC MARBLE------------------>
+                    
+ <!--------------------THIS IS FOR MODAL FLIP HTML5 COMMERCIAL----------------------------->
+                    
+                   <div class="modal fade" id="com" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelcom" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelcom">COMMERCIAL SPACE TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/cpel/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 COMMERCIAL SPACE------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 TERRAZO----------------------------->
+                    
+                   <div class="modal fade" id="terrazo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelterrazo" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelterrazo">TERRAZZO TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/hiqj/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 TERRAZO------------------>
+                    
+                    
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 CONCRETE INDUSTRIAL----------------------------->
+                    
+                   <div class="modal fade" id="con_indu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelcon_indu" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelcon_indu">CONCRETE TECH INDUSTRIAL TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/skaj/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 CONCRETE TECH INDUSTRIAL------------------>
+                    
+                    
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 ROCK STONE OUTDOOR----------------------------->
+                    
+                   <div class="modal fade" id="rock_outdoor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelrock_outdoor" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelrock_outdoor">ROCKSTONE OUTDOOR TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/pvos/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 ROCK STONE OUTDOOR------------------>
+                    
+                    
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 FABRIC----------------------------->
+                    
+                   <div class="modal fade" id="fabric" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelfabric" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelfabric">FABRIC TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/xlgs/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 FABRIC------------------>
+                    
+
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 WOOD----------------------------->
+                    
+                   <div class="modal fade" id="wood" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelwood" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelwood">WOOD TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/ryse/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 WOOD------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 SLATE SANDSTONE TRAVERTINE----------------------------->
+                    
+                   <div class="modal fade" id="slate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelslate" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelslate">SLATE SANDSTONE TRAVERTINE TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/yqbu/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 SLATE SANDSTONE TRAVERTINE------------------>
+                    
+                    
+                
+<!--------------------THIS IS FOR MODAL FLIP HTML5 BRICKSTONE----------------------------->
+                    
+                   <div class="modal fade" id="brickstone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelbrickstone" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelbrickstone">BRICKSTONE TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/pzmk/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5 BRICKSTONE------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 SHAPES AND PATTERNS----------------------------->
+                    
+                   <div class="modal fade" id="shape_pattern" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelshape_pattern" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelshape_pattern">SHAPE &#38; PATTERN TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/rerq/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP SHAPES AND PATTERNS------------------>
+                    
+                    
+<!--START OF MODAL FOR EXCLUSIVE PARTNER BRANDS-->
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 CAPUCINO-SHAPE AND PATTERN----------------------------->
+                    
+                   <div class="modal fade" id="cap_s_and_p" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SHAPE &#38; PATTERN TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/seyw/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>   
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 CAPUCINO-WOOD----------------------------->
+                    
+                   <div class="modal fade" id="cap_wood" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelwood" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelwood">WOOD TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/yohp/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 CAPUCINO-METALLIC----------------------------->
+                    
+                   <div class="modal fade" id="cap_metallic" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelmetallic" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelmetallic">METALLIC TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/wike/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>                
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 CAPUCINO-MATT AND POLISHED----------------------------->
+                    
+                   <div class="modal fade" id="cap_mat_pol" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelmatandpol" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelmatandpol">MATT &#38; POLISHED TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/exhr/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>  
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 SLATE/SANDSTONE/TRAVERTINE - SLATE AND STONE----------------------------->
+                    
+                   <div class="modal fade" id="slate_stone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelslate_stone" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelslate_stone">SLATE &#38; STONE TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/okcj/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------> 
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 GUARDTEC - GUARDTEC----------------------------->
+                    
+                   <div class="modal fade" id="guardtec" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelguardtec" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelguardtec">GUARDTEC TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/bojw/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>       
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 ASEAN STUDIO - WOOD----------------------------->
+                    
+                   <div class="modal fade" id="wood" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelwood" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelwood">WOOD TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/oaey/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------> 
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 LARGE FORMAT TILE-80x80----------------------------->
+                    
+                   <div class="modal fade" id="80x80" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel80x80" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel80x80">80x80</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/kzam/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+
+<!--------------------THIS IS FOR MODAL FLIP HTML5 LARGE FORMAT TILE-60x120----------------------------->
+                    
+                   <div class="modal fade" id="60x120" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel60x120" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel60x120">60x120</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/zhtc/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 LARGE FORMAT TILE-80x160----------------------------->
+                    
+                   <div class="modal fade" id="80x160" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel80x160" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel80x160">80x160</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/uiof/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 LARGE FORMAT TILE-90x180----------------------------->
+                    
+                   <div class="modal fade" id="90x180" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel90x180" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel90x180">90x180</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/znrj/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 LARGE FORMAT TILE-120x120----------------------------->
+                    
+                   <div class="modal fade" id="120x120" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel120x120" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel120x120">120x120</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/lbyq/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 LARGE FORMAT TILE-120x240----------------------------->
+                    
+                   <div class="modal fade" id="120x240" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel120x240" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel120x240">120x240</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/kwxf/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 LARGE FORMAT TILE-120x240----------------------------->
+                    
+                   <div class="modal fade" id="100x100" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel100x100" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel100x100">100x100</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/ussf/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 ASEAN STUDIO - WOOD----------------------------->
+                    
+                   <div class="modal fade" id="stud_mat_pol" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelstud_mat_pol" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelstud_mat_pol">MATT &#38; GLAZED TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/lvfr/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 THICK TILE-THICK TILE----------------------------->
+                    
+                   <div class="modal fade" id="thick" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelthick" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelthick">THICK TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/brnr/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 Safesure TILE - Safesure----------------------------->
+                    
+                   <div class="modal fade" id="antibac" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelantibac" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelantibac">ANTIBACTRIAL / AIR ION TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/kbcd/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+
+<!--------------------THIS IS FOR MODAL FLIP HTML5 Wall Tile----------------------------->
+                    
+                   <div class="modal fade" id="wall" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelwall" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelwall">WALL TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/zwfa/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 TIMBER-TIMBER----------------------------->
+                    
+                   <div class="modal fade" id="timber" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabeltimber" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabeltimber">TIMBER TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/ciys/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 SHAPES AND PATTERNS - SHAPE AND PATTERN----------------------------->
+                    
+                   <div class="modal fade" id="shape_and_pat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelshape_and_type" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelshape_and_type">SHAPE &#38; PATTERN TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/hpjz/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 EUROPEAN-OPTION - METALLIC----------------------------->
+                    
+                   <div class="modal fade" id="metallic_euro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelmetallic_euro" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelmetallic_euro">METALLIC TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/luha/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 EUROPEAN-OPTION - SLATE AND STONE----------------------------->
+                    
+                   <div class="modal fade" id="slate_and_stone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelslate_and_stone" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelslate_and_stone">SLATE &#38; STONE TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/xvba/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 EUROPEAN-OPTION - SWIMMING POOL AND TILES----------------------------->
+                    
+                   <div class="modal fade" id="swim_pool_tiles" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelswim_pool_tiles" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelswim_pool_tiles">SWIMMING POOL TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/bbwf/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 EUROPEAN-OPTION - CLASSIC MARBLE----------------------------->
+                    
+                   <div class="modal fade" id="classic_marble" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelclassic_marble" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelclassic_marble">CLASSIC MARBLE TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/lgxz/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 EUROPEAN-OPTION - BRICKSTONE----------------------------->
+                    
+                   <div class="modal fade" id="brickstone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelbrickstone" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelbrickstone">BRICKSTONE TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/rcvu/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 EUROPEAN-OPTION - CONCRETE AND INDUSTRIAL----------------------------->
+                    
+                   <div class="modal fade" id="concrete_and_indus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelconcrete_and_indus" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelconcrete_and_indus">CONCRETE &#38; INDUSTRIAL TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/yfoo/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 ASEAN EXCLUSIVE - MODERNL----------------------------->
+                    
+                   <div class="modal fade" id="modern" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelmodern" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelmodern">MODERN TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/rkmz/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>   
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 ASEAN EXCLUSIVE - ROCK AND STONE----------------------------->
+                    
+                   <div class="modal fade" id="rock_stone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelrock_stone" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelrock_stone">ROCK &#38; STONE TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/uhyu/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>  
+                    
+                    
+<!--
+------------------THIS IS FOR MODAL FLIP HTML5 ASEAN EXCLUSIVE - TIMBER---------------------------
+                    
+                   <div class="modal fade" id="timber" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabeltimber" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabeltimber">TIMBER TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+----------------------IFRAME FOR FLIP HTML5-----------------------------
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/lqtb/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+-------------------END FOR IFRAME FOR FLIP HTML5------------------------
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+----------------- END OF MODAL FOR FLIP HTML5---------------- 
+-->
+                    
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 ASEAN EXCLUSIVE - SMALL FORMAT CERAMIC TILES----------------------------->
+                    
+                   <div class="modal fade" id="ceramic" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelceramic" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelceramic">SMALL FORMAT TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/fcwe/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------> 
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 ASEAN EXCLUSIVE - CONCRETE AND CEMENT----------------------------->
+                    
+                   <div class="modal fade" id="con_ce" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelcon_ce" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelcon_ce">CONCRETE &#38; CEMENT TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/ucmk/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------> 
+                    
+                    
+                    
+<!--
+------------------THIS IS FOR MODAL FLIP HTML5 ASEAN EXCLUSIVE - SHAPE AND PATTERN---------------------------
+                    
+                   <div class="modal fade" id="shape_patt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelshape_patt" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelshape_patt">SHAPE & PATTERN TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+----------------------IFRAME FOR FLIP HTML5-----------------------------
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/bhsa/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+-------------------END FOR IFRAME FOR FLIP HTML5------------------------
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+----------------- END OF MODAL FOR FLIP HTML5----------------
+-->
+                    
+                    
+<!--------------------THIS IS FOR MODAL FLIP HTML5 ASEAN EXCLUSIVE - SWIMMING POOL TILE----------------------------->
+                    
+                   <div class="modal fade" id="swim_pol" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelswim_pol" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelswim_pol">SWIMMING POOL TILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+<!------------------------IFRAME FOR FLIP HTML5------------------------------->
+                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/tzda/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+<!---------------------END FOR IFRAME FOR FLIP HTML5-------------------------->
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!------------------- END OF MODAL FOR FLIP HTML5------------------>
+                    
+
+                    
+					<div class="portfolio-container" id="card">
+
+<!--Start of OEM Brands-->
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail" >
+					  <a class="card-url" href="#ceramic" data-toggle="modal">
+						<div class="card" id="card">
+						  <img src="../images/ceramic-tile.png" alt="Avatar" class="images">
+						  <h4><b>Ceramic Tile</b></h4>
+						  </div>
+					  </a>
+					</div>
+						
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail all ">
+					  <a class="card-url" href="#mono" data-toggle="modal">
+						<div class="card" id="card">
+						  <img src="../images/mom-tiles.png" alt="Avatar" class="images">
+						  <h4><b>Modern &#38; Monochromatic Tile</b></h4>
+						</div>
+					  </a>
+					</div>
+						
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url" href="#com" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/commercial-tile.png" alt="Avatar" class="images">
+						  <h4><b>Commercial Space Tile</b></h4> 
+					  </div>
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url" href="#classic" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/commercial-tile2.png" alt="Avatar" class="images">
+						  <h4><b>Classic Marble Tile</b></h4> 
+					  </div>				    
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url" href="#terrazo" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/terrazo-tile2.png" alt="Avatar" class="images">
+						  <h4><b>Terrazzo Tile</b></h4> 
+					  </div>
+					  </a>	
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#con_indu" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/concrete-tile.png" alt="Avatar" class="images">
+						  <h4><b>Concrete Tech Industrial Tile</b></h4> 
+					  </div>
+					  </a>
+					</div>
+
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail" >
+					  <a class="card-url " href="#rock_outdoor" data-toggle="modal">
+					  <div class="card" id="card">
+						  <img src="../images/rockstone-tile2.png" alt="Avatar" class="images">
+						  <h4><b>Rock Stone Outdoor Tile</b></h4>
+					  </div>
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail all ">
+					  <a class="card-url " href="#fabric" data-toggle="modal">
+						<div class="card" id="card">
+						  <img src="../images/fabric-tile2.png" alt="Avatar" class="images">
+						  <h4><b>Fabric Tile</b></h4>
+						  </div>
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#wood" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/wood-tile2.png" alt="Avatar" class="images">
+						  <h4><b>Wood Tile</b></h4> 
+					  </div>
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#slate" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/slate-tile.png" alt="Avatar" class="images">
+						  <h4><b>Slate Sandstone Travertine Tile</b></h4> 
+					  </div>				    
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#brickstone" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/brick-tile.png" alt="Avatar" class="images">
+						  <h4><b>Brickstone Tile</b></h4> 
+					  </div>
+					  </a>	
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#shape_pattern" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/shapes-tile.png" alt="Avatar" class="images">
+						  <h4><b>Shape &#38; Pattern Tile</b></h4> 
+					  </div>
+					  </a>
+					</div>
+<!--End of OEM Brands-->
+						
+<!--Start of Exclusive Partner Brands-->						
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail" >
+					  <a class="card-url" href="#cap_s_and_p" data-toggle="modal">
+						<div class="card" id="card">
+						  <img src="../images/exclusive/shapes-logo.png" alt="shapes-tiles.png" class="images">
+						  <h4><b>Shape &#38; Pattern Tile</b></h4>
+						  <p style="display: none;">capucino,exclusive partner brands, shapes and pattern,shapes,pattern</p>
+						</div>
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail all ">
+					  <a class="card-url" href="#cap_wood" data-toggle="modal">
+						<div class="card" id="card">
+						  <img src="../images/exclusive/wood-capucino.png" alt="wood-cap-tiles" class="images">
+						  <h4><b>Wood Tile</b></h4>
+						  <p style="display: none;">capucino,exclusive partner brands</p>
+						</div>
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#cap_metallic" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/exclusive/mettalic-logo.png" alt="metal-cap-tiles" class="images">
+						<h4><b>Metallic Tile</b></h4> 
+						<p style="display: none;">capucino,exclusive partner brands</p>  
+					  </div>
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#cap_mat_pol" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/exclusive/matt-cap-tile-logo.png" alt="matt-cap-tile" class="images">
+						<h4><b>Matt &#38; Polished Tile</b></h4> 
+						<p style="display: none;">capucino,exclusive partner brands, matt and polished,matt,polished</p>
+					  </div>				    
+					  </a>
+					</div>
+					
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail">
+					  <a class="card-url" href="#slate_stone" data-toggle="modal">
+						<div class="card" id="card">
+							<img src="exclusive-partner/images/shape/slate_logo.png" alt="matt-studio" class="images">
+							<h4>Slate &#38; Stone Tile</h4>
+							<p style="display: none;">shape,exclusive partner brands,slate,sandstone,travertine</p>
+						</div>
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail">
+					  <a class="card-url" href="#guardtec" data-toggle="modal">
+						<div class="card" id="card">
+							<img src="exclusive-partner/images/shape/guardtec-logo.png" alt="concrete-studio" class="images">
+							<h4>Guardtec Tile</h4>
+							<p style="display: none;">shape,exclusive partner brands,guardtec shape</p>
+						  </div>
+						</a>
+					</div>
+						
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail">
+					  <a class="card-url" href="#wood" data-toggle="modal">
+						<div class="card" id="card">
+						<img src="../images/exclusive/wood-studio.png" alt="wood-studio" class="images">
+							<h4>Wood Tile</h4>
+							<p style="display: none;">studio,exclusive partner brands</p>
+						  </div>
+						</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail">
+					  <a class="card-url" href="#stud_mat_pol" data-toggle="modal">
+						<div class="card" id="card">
+							<img src="../images/exclusive/matt-studio.png" alt="matt-studio" class="images">
+							<h4>Matt &#38; Glazed Tile</h4>
+							<p style="display: none;">studio,exclusive partner brands,matt,polished</p>
+						  </div>
+						</a>
+					</div>
+	
+<!--End of Exclusive Partner Brands-->
+						
+<!--Start of Large Format-->
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#80x80" data-toggle="modal" >
+					  <div class="card" id="card">
+						<img src="../images/large-format-80v.png" alt="Avatar" class="images">
+						  <h4><b>80 x 80 cm Tile&nbsp; </b></h4>
+							<p style="display: none">large format tile,fino,luxe hd,80x80</p> 
+					  </div>
+					  </a>	
+					</div>
+                        <div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#100x100" data-toggle="modal" >
+					  <div class="card" id="card">
+						<img src="../images/100x100-logo.png" alt="Avatar" class="images">
+						  <h4><b>100 x 100 cm Tile&nbsp; </b></h4>
+							<p style="display: none">large format tile,alaplana,ceramic,bodo,100x100</p> 
+					  </div>
+					  </a>	
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#60x120" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/large-format-60v.png" alt="Avatar" class="images">
+						  <h4><b>60 x 120 cm Tile&nbsp; </b></h4>
+							<p style="display: none">large format tile,alaplana,argenta,yurtbay,luxe hd, luxe build,60x120</p> 
+					  </div>
+						</a>
+					</div>
+						<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#80x160" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/large-format-160.png" alt="Avatar" class="images">
+					    <h4><b>80 x 160 cm Tile</b></h4>
+						<p style="display: none">large format tile, bplus, b plus, luxe xl,80x160</p>
+                      </div>
+					  </a>	
+					</div>
+						<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#90x180" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/large-format-100.png" alt="Avatar" class="images">
+						  <h4><b>90 x 180 cm Tile&nbsp; </b></h4>
+						<p style="display: none">large format tile,alaplana,90x180</p> 
+					  </div>
+					  </a>	
+					</div>
+						<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#120x120" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/large-format-120.png" alt="Avatar" class="images">
+						  <h4>120 x 120 cm Tile&nbsp;</h4>
+							<p style="display: none">large format tile,baldocer, bplus, b plus,120x120</p> 
+					  </div>
+					  </a>	
+					</div>
+						<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#120x240" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/large-fromat-240.png" alt="Avatar" class="images">
+						  <h4><b>120 x 240 cm Tile&nbsp; </b></h4>
+						<p style="display: none">large format tile,baldocer, bplus, b plus,120x240</p> 
+					  </div>
+					  </a>	
+					</div>
+<!--End of Large Format-->
+		
+<!--Start of Thick Tiles-->
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url" href="#thick" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="thick-tile/images/thick-tile-options.png" alt="Avatar" class="images">
+						  <h4><b>Thick Tile</b></h4> 
+						  <p style="display: none;">rialto</p>
+					  </div>
+					  </a>	
+					</div>
+<!--End of Thick Tiles-->
+
+<!--Start of Anti-acterial-->
+						<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#antibac" data-toggle="modal">
+<!--					  <a class="card-url " href="https://online.fliphtml5.com/vseji/ylys/" target="_blank">-->
+					  <div class="card" id="card">
+						<img src="anti-bacterial/images/anti-bac.png" alt="Avatar" class="images">
+						  <h4><b>Antibacterial / Air Ion Tile</b></h4> 
+						  <p style="display: none;">safesure bacterial,safe,sure,safesure,safesure tile, guardtec tile, guardtec, air, air ion tile, antibacterial, anti, bacterial</p>
+					  </div>
+					  </a>	
+					</div>
+<!--End of Anti-bacterial-->
+						
+<!--Start of European Exclusive Brands-->
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail" >
+					  <a class="card-url" href="#timber" data-toggle="modal">
+						<div class="card" id="card">
+						  <img src="european-exclusive/images/01.png" alt="Avatar" class="images">
+						  <h4><b>Timber Tile</b></h4>
+						  <p style="display: none">alaplana,argenta,baldocer,yurtbay,european brands,european exclusive brands</p>
+						</div>
+					  </a>
+					</div>
+
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url" href="#shape_and_pat" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="european-exclusive/images/03.png" alt="Avatar" class="images">
+						  <h4><b>Shape &#38; Pattern Tile</b></h4>
+						  <p style="display: none">baldocer,codicer95,el molino,ceramica ribesalbes,european brands,european exclusive brands</p> 
+					  </div>
+					  </a>
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url" href="#metallic_euro" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="european-exclusive/images/05.png" alt="Avatar" class="images">
+						  <h4><b>Metallic Tile</b></h4>
+						  <p style="display: none">el molino,european brands,european exclusive brands</p> 
+					  </div>
+					  </a>	
+					</div>
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url" href="#slate_and_stone" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="european-exclusive/images/06.png" alt="Avatar" class="images">
+						  <h4><b>Slate &#38; Stone Tile</b></h4>
+						  <p style="display: none">alaplana,argenta,el molino,yurtbay,european brands,european exclusive brands</p>
+					  </div>
+					  </a>
+					</div>
+						
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail" >
+					  <a class="card-url" href="#swim_pool_tiles" data-toggle="modal">
+					  <div class="card" id="card">
+						  <img src="european-exclusive/images/swimming.png" alt="Avatar" class="images">
+						  <h4><b>Swimming Pool Tile&nbsp;</b></h4>
+						  <p style="display: none">el molino,vidrepur,european brands,european exclusive brands</p>
+					  </div>
+					  </a>
+					</div>
+					
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail">
+					  <a class="card-url" href="european-options-large-format.html">
+						<div class="card" id="card">
+						  <img src="european-exclusive/images/08.png" alt="Avatar" class="images">
+						  <h4><b>Large Format Tile&nbsp;</b></h4>
+						  </div>
+					  </a>
+					</div>		
+						
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url" href="#classic_marble" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="european-exclusive/images/classic-logo09.png" alt="Avatar" class="images">
+						  <h4><b>Classic Marble Tile</b></h4>
+						  <p style="display: none">alaplana,bplus,b plus,european brands,european exclusive brands</p> 
+					  </div>
+					  </a>
+					</div>
+					
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url" href="#brickstone" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="european-exclusive/images/11.png" alt="Avatar" class="images">
+						  <h4><b>Brickstone Tile</b></h4>
+						  <p style="display: none">alaplana,el molino,bestile,european brands,european exclusive brands</p> 
+					  </div>
+					  </a>	
+					</div>	
+
+						
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url" href="#concrete_and_indus" data-toggle="modal">
+						<div class="card" id="card">
+						  <img src="european-exclusive/images/02.png" alt="Avatar" class="images">
+						  <h4><b>Concrete &#38; Industrial Tile</b></h4>
+							<p style="display: none">alaplana,baldocer,yurtbay,european brands,european exclusive brands</p>
+						</div>
+					  </a>
+					</div>
+<!--End of European Exclusive Brands-->
+						
+<!--Start of Exclusive Partner Brands-->
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+ <!--					  <a class="card-url " href="https://online.fliphtml5.com/vseji/brih/" target="_blank">-->
+                       <a class="card-url " href="#modern" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/asean/modern-logo.png" alt="Avatar" class="images">
+						  <h4><b>Modern Tile</b></h4>
+						  <p style="display: none">guocera,asean,asean exclusive,asean exclusive partner,asean exclusive partner brands</p> 
+					  </div>
+					  </a>	
+					</div>
+						
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#rock_stone" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/asean/rock&stone-logo.png" alt="Avatar" class="images">
+						  <h4><b>Rock &#38; Stone Tile</b></h4>
+						  <p style="display: none">cotto,spazio,taicera,mml,rock,stone,asean,asean exclusive,asean exclusive partner,asean exclusive partner brands</p> 
+					  </div>				    
+					  </a>
+					</div>
+	
+<!--
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail" >
+					  <a class="card-url " href="#timber" data-toggle="modal">
+						<div class="card" id="card">
+						  <img src="../images/asean/timber-logo.png" alt="Avatar" class="images">
+						  <h4><b>Timber Tile</b></h4>
+						  <p style="display: none">white horse,whitehorse,asean,asean exclusive,asean exclusive partner,asean exclusive partner brands</p>
+						</div>
+					  </a>
+					</div>
+-->
+						
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#ceramic" data-toggle="modal">
+<!--					  <a class="card-url " href="https://online.fliphtml5.com/vseji/wpsl/" target="_blank">-->
+						<div class="card" id="card">
+						  <img src="../images/small-logo.png" alt="Avatar" class="images">
+						  <h4><b>Small Format Tile&nbsp;</b></h4>
+						  <p style="display: none">chokdee,duragres,fino,fino royale,kobin,sosuco,mulia, mulia tile, muliatile,asean,asean exclusive,asean exclusive partner,asean exclusive partner brands</p>
+						  </div>
+					  </a>
+					</div>
+						
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#con_ce" data-toggle="modal">
+<!--					  <a class="card-url " href="https://online.fliphtml5.com/vseji/mgch/" target="_blank">-->
+						<div class="card" id="card">
+						  <img src="../images/asean/concrete-thumb.png" alt="Avatar" class="images">
+						  <h4><b>Concrete &#38; Cement Tile</b></h4>
+                          <p style="display: none">white horse,whitehorse,concrete,cement,asean,asean exclusive,asean exclusive partner,asean exclusive partner brands</p>
+						</div>
+					  </a>
+					</div>
+						
+<!--
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail ">
+					  <a class="card-url " href="#shape_patt" data-toggle="modal">
+					  <div class="card" id="card">
+						<img src="../images/shape-logo.png" alt="Avatar" class="images">
+						  <h4><b>Shape & Pattern Tile</b></h4>
+					      <p style="display: none">white horse,whitehorse,shape,pattern,asean,asean exclusive,asean exclusive partner,asean exclusive partner brands</p> 
+					  </div>
+					  </a>
+					</div>
+-->
+
+					<div class="col-xs-6 col-sm-3 portfolio-thumbnail" >
+					  <a class="card-url " href="#swim_pol" data-toggle="modal">
+					  <div class="card" id="card">
+						  <img src="../images/asean/swimming-pool.png" alt="Avatar" class="images">
+						  <h4><b>Swimming Pool Tile&nbsp;</b></h4>
+						  <p style="display: none">cotto,asean,asean exclusive,asean exclusive partner,asean exclusive partner brands</p>
+					  </div>
+					  </a>
+					</div>
+<!--End of Exclusive Partner Brands-->
+						
+				</div>
+               </div>
+          </div>
+        </div>
+    <!--	Talking Tiles Video/s	-->
+	<div class="modal_backdrop" id="backdrop"></div>
+	<div class="my_modal">
+		
+		<video controls="controls" id="vid" width="50%" height="50%">
+		  <source id="ss" src="../common/videos/video.mp4" type="video/mp4">
+		</video>
+<!--
+		
+		<div class="video_control prev">
+			<img src="images/icon_left_arrow.png" alt="">
+		</div>
+
+		<div class="video_control next">
+			<img src="images/icon_right_arrow.png" alt="">
+		</div>
+		<div id="myVideo" style="height: 400px"></div>
+-->
+	</div>
+    </div>	
+  </div>
+<script src="../js/talkingvid.js"></script>
+</body>
+<!--
+<script>
+		//For Talking Tiles Button
+		const ttBtn = document.querySelector('.btn-2');
+		const ttBackdrop = document.querySelector('.modal_backdrop');
+		const ttModal = document.querySelector('.my_modal');
+		const hidemenu = document.querySelector('.hide-menu-container');
+		
+		
+		ttBtn.onclick = function() {
+			console.log("click");
+			ttBackdrop.style.display= "block";
+			ttModal.style.display= "block";
+            $('.icon-container').removeClass('show');
+			
+			videoPlay(0);
+		}
+		
+		var backdrop = document.getElementById("backdrop");
+		window.onclick = function(event) {
+			if (event.target == backdrop) {
+				ttBackdrop.style.display = "none";
+				ttModal.style.display= "none";
+                $('.icon-container').removeClass('show');
+                hidemenu.style.display="block";
+				document.getElementById('vid').pause();
+          		document.getElementById('vid').currentTime = 0;
+			}
+		}
+        </script>
+-->
+
+<script>
+//    FOR PLAY ALL TALING TILES VIDS
+        const ttBtn1 = document.querySelector('.btn-4');
+		const ttBackdrop = document.querySelector('.modal_backdrop');
+		const ttModal = document.querySelector('.my_modal');
+		const hidemenu = document.querySelector('.hide-menu-container');
+		const hidesidenav = document.querySelector('.sidenav_vid');
+        const Video_block = document.querySelector('.main-video video');
+		
+		
+		ttBtn1.onclick = function() {
+			console.log("click");
+			ttBackdrop.style.display= "block";
+			ttModal.style.display= "block";
+            $('.icon-container').removeClass('show');
+            hidesidenav.style.display="none";
+			Video_block.pause();
+            Video_block.currentTime = 0; 
+			videoPlay(0);
+		}
+		
+		var backdrop = document.getElementById("backdrop");
+		window.onclick = function(event) {
+			if (event.target == backdrop) {
+				ttBackdrop.style.display = "none";
+				ttModal.style.display= "none";
+				document.getElementById('vid').pause();
+          		document.getElementById('vid').currentTime = 0;
+                $('.icon-container').removeClass('show');
+                hidemenu.style.display="block";
+                
+			}
+		}
+    
+    </script>
+
+<script>
+		//For Talking Tiles Button
+		const ttBtn = document.querySelector('.btn-2');
+//        var span = document.getElementsByClassName("close")[1];
+		const sidenav_vid = document.querySelector('.sidenav_vid');
+        const Video = document.querySelector('.main-video video');
+        const hidemenu2 = document.querySelector('.hide-menu-container');
+		ttBtn.onclick = function() {
+			if(sidenav_vid.style.display== "none"){
+                $('body').css('overflow','hidden');
+				sidenav_vid.style.display= "block";
+				$("div.sidenav_vid").addClass('open');
+                Video.play();
+                hidemenu2.style.display="none";
+                $('.icon-container').removeClass('show');
+                
+			}
+			else{
+				sidenav_vid.style.display= "none";
+				$("div.sidenav_vid").removeClass('open');
+                 $('body').css('overflow','auto');
+			}
+		}
+        </script>
+
+	<script>
+		document.getElementById("myinput").setAttribute('value',sessionStorage.getItem("search_val"));
+		const icon = document.querySelectorAll('.icon')[4];
+		const close = document.querySelector('.close-btn');
+		const search = document.querySelector('.search');
+		const clear = document.querySelector('clear');
+		search.classList.toggle('active')
+		icon.onclick = function(){
+			search.classList.toggle('active');
+			if($('div.search').hasClass('active'))
+				$('span.clear').show();
+			else
+				$('span.clear').hide();
+		}
+		
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+//		const btn = document.querySelector('.btn-3');
+//		const btn2 = document.querySelector('.calc-btn');
+		// Get the <span> element that closes the modal
+		const btn = document.querySelectorAll('.icon')[2];
+		const btn2 = document.querySelector('.calc-btn');
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		const sidenav = document.querySelector('.sidenav');
+		btn.onclick = function() {
+			if(sidenav.style.display== "none"){
+				sidenav.style.display= "block";
+				$("div.sidenav").addClass('open');
+			}
+			else{
+				sidenav.style.display= "none";
+				$("div.sidenav").removeClass('open');
+			}
+		}
+		// When the user clicks the button, open the modal 
+		close.onclick = function() {
+			if(sidenav.style.display== "block"){
+				sidenav.style.display= "none";
+				$("div.sidenav").removeClass('open');
+			}
+		}
+//		
+//		// When the user clicks on <span> (x), close the modal
+//		span.onclick = function() {
+//		  modal.style.display = "none";
+//		}
+
+		// When the user clicks anywhere outside of the modal, close it
+//		window.onclick = function(event) {
+//		  if (event.target == modal) {
+//			modal.style.display = "none";
+//		  }
+//		}
+			
+		</script>
+</html>
