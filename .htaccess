@@ -1,0 +1,5 @@
+AuthUserFile /sweet-gingersnap-596937.netlify.app/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Enter YourPassword"
+AuthType Basic
+require user cebuhomebuilders
