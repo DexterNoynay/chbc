@@ -26,50 +26,54 @@ $(document).ready(function(){
 				$('.icon-container').removeClass('show');
 				hidemenu.style.display="block";
 		})
-    
+//    FOR SEARCH FUNCTION
 		$("#myinput").on("keyup",function(){
-			var value = $(this).val().toLowerCase();
-			var found = 'false';
-			$("#card div").filter(function(){
-				if($("#card div:visible").length <= 0){
-					$('h2.found').show();
-					console.log($("#card div:visible").length);
-				}
-				else{
-					$('h2.found').hide();
-				}
-				$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-			})
-			sessionStorage.setItem("search_val",value);
-		});
-
+        var value = $(this).val().toLowerCase();
+        var found = false;
+        $("#card div").each(function() {
+            var $p = $(this).find('p');
+        if ($p.length > 0 && $p.text().toLowerCase().indexOf(value) > -1) {
+            $(this).show();
+            found = true;
+        } else {
+            $(this).hide();
+        }
+    });
+    if (!found) {
+    $('h2.found').show();
+    } else {
+    $('h2.found').hide();
+    }
+            sessionStorage.setItem("search_val",value);
+    });
 		var value = $("#myinput").val().toLowerCase();
-	
-		$("#card div").filter(function(){
-			if($("#card div:visible").length <= 0){
-					$('h2.found').show();
-					console.log($("#card div:visible").length);
-				}
-				else{
-					$('h2.found').hide();
-				}
-				$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-		});
-		$('span.clear').on("click",function(){
-			var url = window.location.pathname;
-			if(document.getElementById('myinput').value=='')
-				{
-					alert("Search Box is Clear");
-				}
-			else{
-				console.log("clicked");
-				document.getElementById('myinput').value='';
-				sessionStorage.setItem("search_val",'');
-				e = $.Event('keyup');
-				e.keyCode= 13; // enter
-				$('#myinput').trigger(e);
-			}		
-		});
+        $("#card div").filter(function(){
+        var pText = $(this).find("p").text().toLowerCase();
+            if($("#card div:visible").length <= 0){
+        $('h2.found').show();
+        console.log($("#card div:visible").length);
+     }
+        else{
+        $('h2.found').hide();
+        }
+        $(this).toggle(pText.indexOf(value) > -1);
+        });
+    $('span.clear').on("click",function(){
+    var url = window.location.pathname;
+    if(document.getElementById('myinput').value=='')
+        {
+            alert("Search Box is Clear");
+        }
+    else{
+        console.log("clicked");
+        document.getElementById('myinput').value='';
+        sessionStorage.setItem("search_val",'');
+        e = $.Event('keyup');
+        e.keyCode= 13; // enter
+        $('#myinput').trigger(e);
+    }       
+    });
+
 		//FOR THE BUTTONS
 		$('div.footer-btn.btn-1').on("click",function(){
 			var url = window.location.pathname;
