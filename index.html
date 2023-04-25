@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><!-- InstanceBegin template="/Templates/base.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-	<title>Cebu Home and Builders: Tiles and Bath</title>
+	<title>Tiles and Bath Collection</title>
 	<link rel="icon" href="images/icon-title.png" type="image/x-icon"> 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -380,9 +380,39 @@
 		</div>
 		<div class="footer-buttons2">
 			<div class="logo">
-				<img src="common/logo/chbclogo.png" width="110px" height="53px" alt="Cebu-Home-Builder.png" class="chb_logo">
-			</div>
-		</div>
+    <img src="common/logo/chbclogo.png" id="image" width="110px" height="53px" alt="Logo" class="chb_logo" onClick="changeImage()">
+    <script>
+    function loadImage() {
+    let displayImage = document.getElementById('image');
+    let imageSrc = localStorage.getItem("imageSrc");
+    // Check if the image source is valid
+    if (!imageSrc || !imageSrc.includes('common/')) {
+        // If not valid, set it to the default value
+        imageSrc = "common/logo/chbclogo.png";
+    }
+    // Set the image source to the saved value, or the default value if no value was saved
+    displayImage.setAttribute("src", imageSrc);
+}  
+        function changeImage() {
+    let displayImage = document.getElementById('image');
+    let imageSrc = displayImage.getAttribute("src");
+    if (imageSrc.match('common/logo/chbclogo.png')) {
+        displayImage.setAttribute("src", 'common/logo/1.png');
+    } else if (imageSrc.match('common/logo/1.png')) {
+        displayImage.setAttribute("src", 'common/logo/2.jpg');
+    } else if (imageSrc.match('common/logo/2.jpg')) {
+        displayImage.setAttribute("src", 'common/logo/3.png');
+    } else if (imageSrc.match('common/logo/3.png')) {
+        displayImage.setAttribute("src", 'common/logo/4.png');
+    } else {
+        displayImage.setAttribute("src", 'common/logo/chbclogo.png');
+    }
+    localStorage.setItem("imageSrc", displayImage.getAttribute("src"));
+}
+     document.addEventListener("DOMContentLoaded", loadImage);           
+    </script>
+    </div>
+    </div>
 	</footer>
     
      
