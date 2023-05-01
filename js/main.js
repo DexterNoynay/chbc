@@ -46,19 +46,29 @@ $(document).ready(function(){
     }
             sessionStorage.setItem("search_val",value);
     });
-		var value = $("#myinput").val().toLowerCase();
-        $("#card div").filter(function(){
-        var pText = $(this).find("p").text().toLowerCase();
-            if($("#card div:visible").length <= 0){
+    
+    var value = $("#myinput").val().toLowerCase();
+    $("#card div").filter(function(){
+    var pText = $(this).find("p").text().toLowerCase();
+    if($("#card div:visible").length <= 0){
         $('h2.found').show();
         console.log($("#card div:visible").length);
-     }
-        else{
+    }
+    else{
         $('h2.found').hide();
-        }
-        $(this).toggle(pText.indexOf(value) > -1);
-        });
-    $('span.clear').on("click",function(){
+    }
+    $(this).toggle(pText.indexOf(value) > -1);
+    });
+
+    // Filter rows based on whether or not they contain the value
+    var container = $("#card .container").filter(function() {
+    return $(this).find("p").text().toLowerCase().indexOf(value) > -1;
+    });
+
+// Show all items within filtered rows
+container.find(".item").show();
+
+$('span.clear').on("click",function(){
     var url = window.location.pathname;
     if(document.getElementById('myinput').value=='')
         {
@@ -72,7 +82,8 @@ $(document).ready(function(){
         e.keyCode= 13; // enter
         $('#myinput').trigger(e);
     }       
-    });
+});
+
 
 		//FOR THE BUTTONS
 		$('div.footer-btn.btn-1').on("click",function(){
