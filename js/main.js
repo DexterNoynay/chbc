@@ -1,16 +1,3 @@
-//Check if User has Logged-in
-//$(document).ready(function(){
-//	var url = window.location.pathname;
-//	var filename = url.substring(url.lastIndexOf('/')+1);
-//	if (filename=="index.html" || filename == null) {
-//		console.log("home");	
-//	}
-//	else {
-//		if (sessionStorage.username === undefined && sessionStorage.password === undefined && filename != "") {
-//			location.replace("../index.html");
-//		}
-//	}
-//});
 
 $(document).ready(function(){
 		//FOR THE INPUT SEARCH BAR
@@ -115,16 +102,7 @@ $('span.clear').on("click",function(){
 				sessionStorage.setItem("search_val",'');
 			}										
 		});
-		//FOR THE BUTTONS
-//		$('div.footer-buttons2').on("click",function(){
-//				var url = window.location.pathname;
-//				var filename = url.substring(url.lastIndexOf('/')+1);
-//				if(filename!="index.html"){
-//					location.replace("../index.html");
-//					document.getElementById('myinput').value='';
-//					sessionStorage.setItem("search_val",'');
-//				}										
-//			});
+		
 	$('a.calc-btn').on("click",function(){
 			const sidenav = document.querySelector('.sidenav');
 			if(sidenav.style.display== "none"){

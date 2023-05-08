@@ -49,6 +49,10 @@ function area_calculator(tile_width,tile_height,tile_unit,room_width,room_height
 		var convert_tile_area = (tile_area)/10000;
 		$("span.tiles_number").text((room_area/convert_tile_area));
 	}
+    else if (room_unit == 'meter' && tile_unit == 'feet'){
+        var convert_tile_area = (tile_area * 0.092903);
+        $("span.tiles_number").text((room_area/convert_tile_area));
+    }
 	else if(room_unit == 'cm'&& tile_unit == 'inch'){
 		var convert_tile_area = (tile_area*6.452);
 		$("span.tiles_number").text((room_area/convert_tile_area));
@@ -57,6 +61,10 @@ function area_calculator(tile_width,tile_height,tile_unit,room_width,room_height
 		var convert_tile_area = (tile_area*10000)/6.452;
 		$("span.tiles_number").text((room_area/convert_tile_area));
 	}
+    else if (room_unit == 'cm' && tile_unit == 'feet'){
+        var convert_tile_area = (tile_area * 144 * 6.4516);
+        $("span.tiles_number").text((room_area/convert_tile_area));
+    }
 	else if(room_unit == 'inch'&& tile_unit == 'cm'){
 		var convert_tile_area = (tile_area/6.452);
 		$("span.tiles_number").text((room_area/convert_tile_area));
@@ -65,6 +73,22 @@ function area_calculator(tile_width,tile_height,tile_unit,room_width,room_height
 		var convert_tile_area = (tile_area*10000)/6.452;
 		$("span.tiles_number").text((room_area/convert_tile_area));
 	}
+    else if (room_unit == 'inch' && tile_unit == 'feet'){
+        var convert_tile_area = (tile_area * 144);
+        $("span.tiles_number").text((room_area/convert_tile_area));
+    }
+    else if (room_unit == 'feet' && tile_unit == 'meter'){
+        var convert_tile_area = (tile_area * 10.764);
+        $("span.tiles_number").text((room_area/convert_tile_area));
+    }
+    else if (room_unit == 'feet' && tile_unit == 'cm'){
+        var convert_tile_area = (tile_area * 0.000010764);
+        $("span.tiles_number").text((room_area/convert_tile_area));
+    }
+    else if (room_unit == 'feet' && tile_unit == 'inch'){
+        var convert_tile_area = (tile_area / 144);
+        $("span.tiles_number").text((room_area/convert_tile_area));
+    }
 	else{
 		$("span.tiles_number").text((room_area/tile_area));
 	}

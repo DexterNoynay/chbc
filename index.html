@@ -5,12 +5,8 @@
 	<link rel="icon" href="images/icon-title.png" type="image/x-icon"> 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-    <script src="js/sweetalert2.all.min.js"></script>
-    
-	<link rel="stylesheet" href="css/sweetalert2.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="css/font.googleapis.css" rel="stylesheet">
@@ -22,12 +18,7 @@
 	<script src="js/submain.js"></script>
 	<script src="js/calcu.js"></script>
 	
-	
 	  
-<!--
-	<link rel="stylesheet" href="../css/login.css">
-	<script src="../js/login.js"></script>
--->
 	
 	
 	<!-- InstanceBeginEditable name="head" -->
@@ -38,43 +29,21 @@
 </head>
 <body id="top" class="">
 	 
-<!--
-	<div id="login-container">
-		<div id="login-container-inner">
-			<p id="login-result"></p>
-			<form onSubmit="checkUser()">	
-				<input type="text" id="login-name" placeholder="Username" required>		
-				<input type="password" id="login-password" placeholder="Password" required>
-				<input type="Submit" value="LOGIN">
-			</form>
-		</div>
-	</div>
--->
 	
 	
-<!--
-	<div class="navbar-container">
-		<nav class="navbar">
-			<ul class="navbar-list">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Return</a></li>
-				<li><a href="#">Tile Calculator</a></li>
-				<li><a href="#">Talking Tiles</a></li>
-			</ul>
-		</nav>
-	</div>
--->
+
 	<!-- Sidebar -->
 	<div class="sidenav" style="display: none">
 		<h1 class="sidenav-title">TILE <br>CALCULATOR</h1>
-		<a class="close-btn"><img src="images/close-btn.png" width="30px" height="30px"></a>
+		<a class="close-btn"><img src="images/close-btn.png" width="30px" height="30px" alt="close-button"></a>
 		<div class="tile-measure">
 		  <input placeholder="Width" id="tile-width">
 		  <input placeholder="Length" id="tile-height">
 		<select id="unit">
 			<option value="cm">cm</option>
-			<option value="inch">inch.</option>
+			<option value="inch">inch</option>
 			<option value="meter">meter</option>
+			<option value="feet">feet</option>
 		</select>
 			<p>Tile Size: <span class="tile-area u_bold">&nbsp;0</span><sup>2</sup></p>
 		</div>
@@ -85,6 +54,7 @@
 			<option value="cm">cm</option>
 			<option value="inch">inch.</option>
 			<option value="meter">meter</option>
+			<option value="feet">feet</option>
 		</select>
 			<p>Floor/Wall Size: <span class="room-area u_bold">&nbsp;0</span><sup>2</sup></p>
 			<br>
@@ -335,6 +305,15 @@
 							</div>
 							</a>	
 						</div>
+                        
+                        <div class="col-md-4 portfolio-thumbnail ">
+							<a class="card-url" href="pages/cool-bath-system.html">
+							<div class="card" id="card">
+							  <img src="images/cool-bath-scene.png" alt="Avatar" class="images">
+								<h3 class="u_pab15 u_long_text">COOL BATH SYSTEM</h3> 
+							</div>
+							</a>	
+						</div>
 
 						
 						<!--PASTE HERE THE NEW DIV WITH NEW DETAILS-->
@@ -353,17 +332,6 @@
 		<video controls="controls" id="vid" width="50%" height="50%">
 		  <source id="ss" src="common/videos/video.mp4" type="video/mp4">
 		</video>
-<!--
-		
-		<div class="video_control prev">
-			<img src="images/icon_left_arrow.png" alt="">
-		</div>
-
-		<div class="video_control next">
-			<img src="images/icon_right_arrow.png" alt="">
-		</div>
-		<div id="myVideo" style="height: 400px"></div>
--->
 	</div>
 <!--	xxxxxxxxxxxxxxxxxxxxxxx	-->
 	   
@@ -374,7 +342,6 @@
 			</span>
 			<span class="footer-btn btn-3">
 				<div class="calculator">
-<!--					<img src="../images/icon_calculator.png">-->
 				</div>
 			</span>
 		</div>
@@ -498,12 +465,11 @@
         
 	    <script>
 		//----------------------------------------------------//
-		
+
 		const btn = document.querySelector('.btn-3');
 		const btn2 = document.querySelector('.calc-btn');
 		// Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
-
 		const sidenav = document.querySelector('.sidenav');
 		btn.onclick = function() {
 			if(sidenav.style.display== "none"){
@@ -515,8 +481,7 @@
 				$("div.sidenav").removeClass('open');
 			}
 		}
-		
-		
+
 		//Hide icon
 		const icon = document.querySelector('.icon');
 		const search = document.querySelector('.search');
@@ -533,24 +498,4 @@
 	 
 	
 	
-	
-    
-    
-    <script>
-        
-        //      THIS IS FOR MESSAGE ALERT JS    //
-        
-        //   document.querySelector(".card-alert").addEventListener('click', function(){
-        //   Swal.fire("NO LINK YET");
-        //   });
-            const element = document.querySelectorAll('.card-alert');
-            if (element.length !== 0) {
-            for (var i=0; i<element.length; i++) {
-            element[i].addEventListener('click', function () {
-            Swal.fire("Sorry, This is Empty!");
-            });
-            }
-            } 
-    </script>
-    
 <!-- InstanceEnd --></html>
