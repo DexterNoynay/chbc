@@ -5,12 +5,8 @@
 	<link rel="icon" href="images/icon-title.png" type="image/x-icon"> 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
-    <script src="../js/sweetalert2.all.min.js"></script>
-    
-	<link rel="stylesheet" href="../css/sweetalert2.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link href="../css/font.googleapis.css" rel="stylesheet">
@@ -21,7 +17,6 @@
 	<link href="../css/talkingtiles.css" rel="stylesheet">
 	<script src="../js/submain.js"></script>
 	<script src="../js/calcu.js"></script>
-	
 	
 	
 	
@@ -75,29 +70,19 @@
 		</div>
 	</div>
 	 
-<!--
-	<div class="navbar-container">
-		<nav class="navbar">
-			<ul class="navbar-list">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Return</a></li>
-				<li><a href="#">Tile Calculator</a></li>
-				<li><a href="#">Talking Tiles</a></li>
-			</ul>
-		</nav>
-	</div>
--->
+
 	<!-- Sidebar -->
 	<div class="sidenav" style="display: none">
 		<h1 class="sidenav-title">TILE <br>CALCULATOR</h1>
-		<a class="close-btn"><img src="../images/close-btn.png" width="30px" height="30px"></a>
+		<a class="close-btn"><img src="../images/close-btn.png" width="30px" height="30px" alt="close-button"></a>
 		<div class="tile-measure">
 		  <input placeholder="Width" id="tile-width">
 		  <input placeholder="Length" id="tile-height">
 		<select id="unit">
 			<option value="cm">cm</option>
-			<option value="inch">inch.</option>
+			<option value="inch">inch</option>
 			<option value="meter">meter</option>
+			<option value="feet">feet</option>
 		</select>
 			<p>Tile Size: <span class="tile-area u_bold">&nbsp;0</span><sup>2</sup></p>
 		</div>
@@ -108,6 +93,7 @@
 			<option value="cm">cm</option>
 			<option value="inch">inch.</option>
 			<option value="meter">meter</option>
+			<option value="feet">feet</option>
 		</select>
 			<p>Floor/Wall Size: <span class="room-area u_bold">&nbsp;0</span><sup>2</sup></p>
 			<br>
@@ -286,22 +272,15 @@
 					<br>
 					<h2 class="u_grey" style="position: relative;">
                         <img width="18%" src="../images/asean/Cergres -png.png" alt="">
-<!--						<img width="18%" src="../images/asean/Chokdee -png.png">-->
 						<img width="18%" src="../images/asean/cotto_png.png" alt="">
-						<img width="18%" src="../images/asean/Duragres-01.png" alt="">
-						<img width="18%" src="../images/asean/FINO-Royale_png-01.png" alt="">
 						<img width="18%" src="../images/asean/GUOCERA_png.png" alt="">
 						<img width="18%" src="../images/asean/kobin.jpg" alt="">
 						<img width="18%" src="../images/asean/MULIA png.png" alt="">
                         <img width="18%" src="../images/asean/MML_png.png" alt="">
 						<img width="12%" src="../images/asean/Taicera -png.png" alt="">
-						
-						
-						<div class="" style="position: relative">
-                            <img width="18%" src="../images/asean/spazio-logo.png" alt="">
-                            <img width="18%" src="../images/asean/SOSUCO LOGO-01.png" alt="">
-							<img width="10%" src="../images/asean/white-horse-ceramic.png" alt="">
-						</div>
+                        <img width="18%" src="../images/asean/spazio-logo.png" alt="">
+                        <img width="18%" src="../images/asean/SOSUCO LOGO-01.png" alt="">
+				        <img width="10%" src="../images/asean/white-horse-ceramic.png" alt="">
 					</h2>
                     
 
@@ -354,34 +333,6 @@
                   </div>
                 </div>
 <!------------------- END OF MODAL FOR FLIP HTML5------------------>  
-                    
-                    
-<!--
-------------------THIS IS FOR MODAL FLIP HTML5 ASEAN EXCLUSIVE - TIMBER---------------------------
-                    
-                   <div class="modal fade" id="timber" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabeltimber" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabeltimber">TIMBER TILE</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                      </div>
-                      <div class="modal-body">
-----------------------IFRAME FOR FLIP HTML5-----------------------------
-                    <iframe class="iframe_flip" src="https://online.fliphtml5.com/vseji/lqtb/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
--------------------END FOR IFRAME FOR FLIP HTML5------------------------
-                    </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
------------------ END OF MODAL FOR FLIP HTML5---------------- 
--->
-                    
                     
                     
 <!--------------------THIS IS FOR MODAL FLIP HTML5 ASEAN EXCLUSIVE - SMALL FORMAT CERAMIC TILES----------------------------->
@@ -593,17 +544,6 @@
 		<video controls="controls" id="vid" width="50%" height="50%">
 		  <source id="ss" src="../common/videos/video.mp4" type="video/mp4">
 		</video>
-<!--
-		
-		<div class="video_control prev">
-			<img src="images/icon_left_arrow.png" alt="">
-		</div>
-
-		<div class="video_control next">
-			<img src="images/icon_right_arrow.png" alt="">
-		</div>
-		<div id="myVideo" style="height: 400px"></div>
--->
 	</div>
 <!--	xxxxxxxxxxxxxxxxxxxxxxx	-->
 	
@@ -689,14 +629,12 @@
         
         
 	
-	
 	 
 	<script>
 		const btn = document.querySelectorAll('.icon')[2];
 		const btn2 = document.querySelector('.calc-btn');
 		// Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
-
 		const sidenav = document.querySelector('.sidenav');
 		btn.onclick = function() {
 			if(sidenav.style.display== "none"){
@@ -708,9 +646,6 @@
 				$("div.sidenav").removeClass('open');
 			}
 		}
-		
-		
-		
 		const icon = document.querySelectorAll('.icon')[4];
 		const search = document.querySelector('.search');
 		const clear = document.querySelector('clear');
@@ -725,23 +660,4 @@
 		
 	</script>
 	 
-    
-    
-    <script>
-        
-        //      THIS IS FOR MESSAGE ALERT JS    //
-        
-        //   document.querySelector(".card-alert").addEventListener('click', function(){
-        //   Swal.fire("NO LINK YET");
-        //   });
-            const element = document.querySelectorAll('.card-alert');
-            if (element.length !== 0) {
-            for (var i=0; i<element.length; i++) {
-            element[i].addEventListener('click', function () {
-            Swal.fire("Sorry, This is Empty!");
-            });
-            }
-            } 
-    </script>
-    
 <!-- InstanceEnd --></html>
